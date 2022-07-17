@@ -1,78 +1,6 @@
 'use strict';
 
-let answer1 = prompt('Do I live in Washington?')
-console.log(answer1);
-
-answer1 = answer1.toLowerCase();
-console.log(answer1);
-
-if (answer1 === 'yes' || answer1 === 'y') {
-    alert('Correct! I live in Renton, WA.');
-} else if (answer1 === 'no' || answer1 === 'n') {
-    alert('Incorrect, I live in Renton, WA!')
-} else {
-    alert('I currently reside in Renton, WA.');
-}
-
-let answer2 = prompt('Do I like cats?');
-console.log(answer2);
-
-answer2 = answer2.toLowerCase();
-console.log(answer2);
-
-if (answer2 === 'yes' || answer2 === 'y') {
-    alert('Yes! I have two kittens!');
-} else if (answer2 === 'no' || answer2 === 'n') {
-    alert('False. I love cats!')
-} else {
-    alert('I love cats!')
-}
-
-let answer3 = prompt('Is purple my favorite color?');
-console.log(answer3);
-
-answer3 = answer3.toLowerCase();
-console.log(answer3);
-
-if (answer3 === 'yes' || answer3 === 'y') {
-    alert('Yes, specifically lavender ;)');
-} else if (answer3 === 'no' || answer3 === 'n') {
-    alert('Nope! Purple is my favorite color.')
-} else {
-    alert('I have many favorite colors, but my favorite is purple.')
-}
-
-let answer4 = prompt('Am I older than 30?');
-console.log(answer4);
-
-answer4 = answer4.toLowerCase();
-console.log(answer4);
-
-if (answer4 === 'yes' || answer4 === 'y') {
-    alert('No, but I am pretty dang close!');
-} else if (answer4 === 'no' || answer4 === 'n') {
-    alert('You are right, I am 28!')
-} else {
-    alert('I am 28, reaching 30.')
-}
-
-let answer5 = prompt('Do I have any experience in the tech field?');
-console.log(answer5);
-
-answer5 = answer5.toLowerCase();
-console.log(answer5);
-
-if (answer5 === 'yes' || answer5 === 'y') {
-    alert('No, I am just beginning my journey at Code Fellows :)');
-} else if (answer5 === 'no' || answer5 === 'n') {
-    alert('Correct. I am switching over from the healthcare field!')
-} else {
-    alert('I am mostly just beginning my journey at Code Fellows and coming from the healthcare field!')
-}
-
-
 let firstName = prompt("What is your name?");
-
 let time = prompt("What hour is it (0-24)?");
 let message = "";
     
@@ -89,12 +17,131 @@ let message = "";
         message = "Good Day!";
         //console.log("Have a great day!");
     }
+    alert('Hello ' + firstName + '! ' + message + ' Welcome to my about me guessing game. Please answer with yes/no or y/n.');
   
 document.write('<p style =\'color: white; background-color: palegoldenrod; font-size: 3rem; text-align: center;\'>Hello ' + firstName + ', ' + message + '</p>');
 console.log('Hello ' + firstName + ', ' + message);
 
+let correctCount = 0;
+let answer1 = prompt('Do I live in Washington?')
+console.log(answer1);
 
+answer1 = answer1.toLowerCase();
+console.log(answer1);
 
+if (answer1 === 'yes' || answer1 === 'y') {
+    alert('Correct! I live in Renton, WA.');
+    correctCount++;
+} else if (answer1 === 'no' || answer1 === 'n') {
+    alert('Incorrect, I live in Renton, WA!')
+} else {
+    alert('I currently reside in Renton, WA.');
+}
+
+let answer2 = prompt('Do I like cats?');
+console.log(answer2);
+
+answer2 = answer2.toLowerCase();
+console.log(answer2);
+
+if (answer2 === 'yes' || answer2 === 'y') {
+    alert('Yes! I have two kittens!');
+    correctCount++;
+} else if (answer2 === 'no' || answer2 === 'n') {
+    alert('False. I love cats!')
+} else {
+    alert('I love cats!')
+}
+
+let answer3 = prompt('Is purple my favorite color?');
+console.log(answer3);
+
+answer3 = answer3.toLowerCase();
+console.log(answer3);
+
+if (answer3 === 'yes' || answer3 === 'y') {
+    alert('Yes, specifically lavender ;)');
+    correctCount++;
+} else if (answer3 === 'no' || answer3 === 'n') {
+    alert('Nope! Purple is my favorite color.')
+} else {
+    alert('I have many favorite colors, but my favorite is purple.')
+}
+
+let answer4 = prompt('Am I older than 30?');
+console.log(answer4);
+
+answer4 = answer4.toLowerCase();
+console.log(answer4);
+
+if (answer4 === 'yes' || answer4 === 'y') {
+    alert('No, but I am pretty dang close!');
+} else if (answer4 === 'no' || answer4 === 'n') {
+    alert('You are right, I am 28!')
+    correctCount++;
+} else {
+    alert('I am 28, reaching 30.')
+}
+
+let answer5 = prompt('Do I have any experience in the tech field?');
+console.log(answer5);
+
+answer5 = answer5.toLowerCase();
+console.log(answer5);
+
+if (answer5 === 'yes' || answer5 === 'y') {
+    alert('No, I am just beginning my journey at Code Fellows :)');
+} else if (answer5 === 'no' || answer5 === 'n') {
+    alert('Correct. I am switching over from the healthcare field!')
+    correctCount++;
+} else {
+    alert('I am mostly just beginning my journey at Code Fellows and coming from the healthcare field!')
+}
+
+let answer6 = prompt('How many years have I been practicing as a Dental Hygienist? You have 4 guesses.'); 
+let chances = 3;
+
+while(answer6 != 3 && chances > 0){
+    if(answer6 < 3 ){
+        alert('Too low!');
+    } else if(answer6 > 3) {
+        alert('Too high!');
+    }
+    chances--;
+    answer6 = prompt(`How many years have I been practicing as a Dental Hygienist? You have ${chances + 1} chances left to guess.`);
+} 
+
+if(answer6 != 3){
+    alert('Incorrect. I have been practicing for 3 years.');
+}
+
+if(answer6 == 3){
+    alert('Correct!');
+    correctCount++;
+}
+
+let answer7 = prompt('What are some countries I want to visit? You have 6 guesses.');
+answer7 = answer7.toLowerCase();
+let chances2 = 5;
+
+let toVisit = ['japan', 'korea', 'thailand', 'philipines'];
+
+while(toVisit.indexOf(answer7) == -1 && chances2 > 0){
+    alert('That sounds cool, but not on my list currently.');
+    chances2--;
+    answer7 = prompt(`What are some countries I want to visit? You have ${chances2 + 1} chances left to guess.`);
+} 
+
+if(toVisit.indexOf(answer7) == -1){
+    alert('Incorrect. The countries I still want to visit are Japan, Korea, Thailand, and Philipines.');
+} 
+
+if(toVisit.indexOf(answer7) != -1){
+    alert('Yes!');
+    correctCount++;
+}
+
+alert('You got ' + correctCount + ' out of 7 answers right.');
 
 // switch (answer2) {
 //     case 'idk':

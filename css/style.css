@@ -81,10 +81,12 @@ img {
     justify-content: center
   }
 
+ 
 .image {
     flex-basis: 40%
 }
-  
+
+
 .text {
     padding: 5px;
     font-size: 23px;
@@ -98,7 +100,20 @@ img {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
   
+.tenthings {
+    font-size: 35px;
+    color: mediumaquamarine;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 .greeting {
     text-align: center;
     font-size: 2rem;
+}
+
+.scrollbox {
+    height: 120px; 
+    width: 680px;  
+    border:1px solid #ccc;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    overflow: auto;
 }
