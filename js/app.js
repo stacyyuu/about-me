@@ -120,7 +120,7 @@ if(answer6 == 3){
     correctCount++;
 }
 
-let answer7 = prompt('What are some countries I want to visit? You have 6 guesses.');
+let answer7 = prompt('What is a country I want to visit? You have 6 guesses.');
 answer7 = answer7.toLowerCase();
 let chances2 = 5;
 
@@ -129,7 +129,7 @@ let toVisit = ['japan', 'korea', 'thailand', 'philipines'];
 while(toVisit.indexOf(answer7) == -1 && chances2 > 0){
     alert('That sounds cool, but not on my list currently.');
     chances2--;
-    answer7 = prompt(`What are some countries I want to visit? You have ${chances2 + 1} chances left to guess.`);
+    answer7 = prompt(`What is a country I want to visit? You have ${chances2 + 1} chances left to guess.`);
 } 
 
 if(toVisit.indexOf(answer7) == -1){
